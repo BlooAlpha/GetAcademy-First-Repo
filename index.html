@@ -19,8 +19,36 @@
     }
 
     section{
+        display: grid;
+        grid-template-columns: 20% 20% 55% 5%;
+        grid-template-rows: auto;
+        grid-template-areas: 'hdr content content'
+                             'filler content content';
+    }
+    section div{
         margin:10px; padding:5px;
+        border-radius: 5px;
         background-color: lightgray;
+        
+    }
+
+    .header{
+        grid-area: hdr;
+    }
+    .content{
+        grid-area: content;
+    }
+
+    section img{
+
+        margin: 2%;
+        border: 2px solid slategray;
+        border-radius:5px;
+        height: auto;
+        
+    }
+    section p{
+        margin: 2%;
     }
 </style>
 
@@ -28,11 +56,31 @@
     <h1>Hei Chat! :^)</h1>
     
     <section>
-        <h2>Update 1:</h2>
-        <h5>(13.08.2025)</h5>
-        <h3>Jeg fikk boka i dag!!</h3>
-        <img src="images\WIN_20250813_14_16_50_Pro.jpg"; alt="Meg som holder boka!"; width="640"; height="360" style="border:2px solid slategray; vertical-align:middle;">
-        <p>Har lest en halv side så langt. Virker bra!! <br>Kjøpte den <a href="https://www.ark.no/produkt/boker/fagboker/koding-for-alle-i-javascript-9788202661243">Her!</a></p>
+            <div class="header">
+                <h2>Update 1:</h2>
+                <h5>(13.08.2025)</h5>
+                <h3>Jeg fikk boka i dag!!</h3>
+            </div>
+            <div class="content">
+                <img src="images\WIN_20250813_14_16_50_Pro.jpg"; alt="Meg som holder boka!"; width="95%"; height="75%">
+                <p>Har lest en halv side så langt. Virker bra!! <br>Kjøpte den <a href="https://www.ark.no/produkt/boker/fagboker/koding-for-alle-i-javascript-9788202661243">Her!</a></p>
+            </div>
+    </section>
+
+    <section>
+            <div class="header">
+                <h2>Update 2:</h2>
+                <h5>(20.08.2025)</h5>
+                <h3>Nå tester jeg Flex og litt diverse!</h3>
+            </div>
+            <div class="content">
+                <!-- <img src="images\WIN_20250813_14_16_50_Pro.jpg"; alt="Meg som holder boka!"; width="640"; height="360"> -->
+                <p>Enda litt usikker på hvordan sluttresultatet blir, men det finner vi ut av! ;)
+                    <br>
+                    <br>Lytter på <a href="https://www.youtube.com/watch?v=wQnjd84k_L0">Alta Falls</a> akkurat nå!!</p>
+                    <br>
+                    <br>Endte opp med å bruke Grid i dette tilfellet, og ikke Flex! Veldig kult!! Fikk til og med ordnet bildet over :D
+            </div>
     </section>
 
 </body>
